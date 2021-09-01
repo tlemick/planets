@@ -1,0 +1,196 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--neutral500);
+    background-image: url(assets/background-stars.svg);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    background-color: var(--neutral500);
+    border: none;
+    @media (min-width: 40em) {
+        border: 1px solid var(--neutral50);
+    }
+}
+
+li, a {
+    padding: 4px;
+}
+
+:focus {
+    outline: 2px dashed var(--white);
+}
+
+:focus:not(:focus-visible) {
+    outline: 0.5px dashed var(--primary);
+    @media (max-width: 425px) {
+        outline: none;
+    }
+  }
+
+@media (hover: hover) {
+    .nav-planets li:hover {
+        border-top: 4px dashed var(--primary);
+    }
+    .planet-info__tabs button:hover {
+        border: 1px dashed var(--primary);
+    }
+}
+
+@media (hover: none) {
+    .nav-planets li:active {
+        border: none;
+        outline: 1px dashed var(--primary);
+    }
+    .planet-info__tabs button:active {
+        border-bottom: 4px solid (--primary);
+        outline: none;
+    }
+}
+
+.app-wrapper {
+    @media (min-width: 40em) {
+        margin-top: 70px;
+    }
+    @media (min-width: 1160px) {
+        max-width: 1110px;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*-----------Navigation------------*/
+
+
+nav {
+    position: absolute;
+    z-index: 5;
+    overflow-x: hidden;
+}
+
+.nav-header { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background: var(--neutral500);
+    border-bottom: 1px solid var(--neutral50);
+    @media (min-width: 40em) {
+        border: none;
+        justify-content: space-around;
+    }
+    @media (min-width: 1160px) {
+        justify-content: flex-start;
+    }
+}
+
+.nav-menu-btn {
+    background-color: var(--neutral500);
+    border: none;
+    @media (min-width: 40em) {
+        display: none;
+    }
+}
+
+.nav-planet {
+    @media (min-width: 60em) {
+        border-top: 4px solid var(--neutral500);
+    }
+}
+
+.nav-planets {
+    position: fixed;
+    right: 0;
+    margin-top: 136px;
+    width: 100%;
+    background-color: var(--neutral500);
+    transition: transform 300ms cubic-bezier(.5, 0, .5, 1);
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    li {
+        font-size: 15px;
+        border-bottom: 1px solid var(--neutral50);
+        padding: 20px 24px;
+        display: flex;
+        flex-direction: row;
+        a {
+            text-decoration: none;
+            color: var(--white);
+            font-family: 'Antonio';
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.36px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+        a::after {
+            content: url(assets/icon-chevron.svg);
+        }
+    }
+    @media (min-width: 40em) {
+        margin-top: 70px;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+        padding: 0;
+        border-bottom: 1px solid var(--neutral50);
+        li {
+            font-size: 11px;
+            border-bottom: none;
+            border-top: 4px solid var(--neutral500);
+            padding-top: 8px;
+            padding-bottom: 20px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        li a::after {
+            content: '';
+        }
+    }
+    @media (min-width: 1160px) {
+        margin-top: 18px;
+        margin-right: 40px;
+        justify-content: flex-end;
+        width: auto;
+        border-bottom: none;
+    }
+    span {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 25px;
+        @media (min-width: 40em) {
+            display: none;
+        }
+    }
+}
+
+.nav-open {
+    transform: translateX(0);
+}

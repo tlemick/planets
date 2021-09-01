@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="output.css">
+  
+  <title>The Planets</title>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-header">
+        <h2>The Planets</h2>
+        <button class="nav-menu-btn nav-toggle"><img src="assets/icon-hamburger.svg"></button>
+    </div>
+    <ul class="nav-planets">
+        <li id="mercury" class="nav-planet nav-is-active"><span class="dot mercury-color"></span><a href="#" onclick="planetPicker(0)">Mercury</a></li>
+        <li id="venus" class="nav-planet"><span class="dot venus-color"></span><a href="#" onclick="planetPicker(1)">Venus</a></li>
+        <li id="earth" class="nav-planet"><span class="dot earth-color"></span><a href="#" onclick="planetPicker(2)">Earth</a></li>
+        <li id="mars" class="nav-planet"><span class="dot mars-color"></span><a href="#" onclick="planetPicker(3)">Mars</a></li>
+        <li id="jupiter" class="nav-planet"><span class="dot jupiter-color"></span><a href="#" onclick="planetPicker(4)">Jupiter</a></li>
+        <li id="saturn" class="nav-planet"><span class="dot saturn-color"></span><a href="#" onclick="planetPicker(5)">Saturn</a></li>
+        <li id="uranus" class="nav-planet"><span class="dot uranus-color"></span><a href="#" onclick="planetPicker(6)">Uranus</a></li>
+        <li id="neptune" class="nav-planet"><span class="dot neptune-color"></span><a href="#" onclick="planetPicker(7)">Neptune</a></li>
+    </ul>
+  </nav>
+
+  <main id="app">
+
+  </main>  
+
+  <script src="scripts.js"></script>
+</body>
+</html>
