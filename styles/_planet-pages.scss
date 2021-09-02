@@ -1,5 +1,6 @@
 .planet-image__wrapper {
-    margin-top: 200px;
+
+    margin-top: 150px;
     @media (min-width: 40em) {
         margin-top: 0;
     }
@@ -89,7 +90,7 @@
 .planet-info {
     line-height: 22px;
     p {
-        font-size: clamp(9px, 2vw, 14px);
+        font-size: clamp(11px, 2vw, 14px);
     }
 }
 
